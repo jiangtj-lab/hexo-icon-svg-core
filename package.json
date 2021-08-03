@@ -1,0 +1,55 @@
+{
+  "name": "@jiangtj/hexo-icon-svg-core",
+  "version": "0.0.1",
+  "description": "An icon svg core package for Hexo.",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint .",
+    "test": "mocha test/index.js",
+    "p": "yarn --proxy=http://localhost:1080"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "keywords": [
+    "Hexo",
+    "svg",
+    "icon",
+    "hexo-plugin"
+  ],
+  "author": "Mr.J",
+  "license": "LGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangtj-lab/hexo-icon-svg-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jiangtj-lab/hexo-icon-svg-core/issues"
+  },
+  "homepage": "https://github.com/jiangtj-lab/hexo-icon-svg-core#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "hexo-fs": "^3.1.0",
+    "ionicons": "^5.5.2",
+    "qs": "^6.10.1",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.0.0",
+    "eslint-config-hexo": "^4.1.0",
+    "hexo": "^5.0.0",
+    "mocha": "^8.0.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
