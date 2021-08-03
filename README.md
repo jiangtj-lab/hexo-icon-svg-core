@@ -11,7 +11,7 @@ yarn add @jiangtj/hexo-icon-svg-core
 If used in themes or plugins, add the following additional content
 
 ```js
-const { install } = require('hexo-icon-svg-core/lib/install');
+const { install } = require('@jiangtj/hexo-icon-svg-core/lib/install');
 install(hexo);
 ```
 
@@ -20,7 +20,7 @@ install(hexo);
 In the script
 
 ```js
-const { icon } = require('hexo-icon-svg-core/lib/core');
+const { icon } = require('@jiangtj/hexo-icon-svg-core/lib/core');
 icon(name, options)
 ```
 
@@ -46,7 +46,7 @@ In the article (key and value will be mapped to option)
 ## Customize
 
 ```js
-const { load, assignOptions } = require('hexo-icon-svg-core/lib/core');
+const { load, assignOptions } = require('@jiangtj/hexo-icon-svg-core/lib/core');
 
 load({
   type: 'custom type name', // type will be removed `-``_`` `, for example, this example is the same as `customtypename`
