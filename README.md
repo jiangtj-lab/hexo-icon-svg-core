@@ -1,6 +1,6 @@
 # hexo-icon-svg-core
 
-A hexo plugin for svg icon, included font-awesome5 and ionicons
+A hexo plugin for svg icon, included font-awesome5 and ionicons (in development, there may be huge changes in the api)
 
 ## Install
 
@@ -45,7 +45,7 @@ In the article (key and value will be mapped to option)
 
 ## Customize
 
-```
+```js
 const { load, assignOptions } = require('hexo-icon-svg-core/lib/core');
 
 load({
