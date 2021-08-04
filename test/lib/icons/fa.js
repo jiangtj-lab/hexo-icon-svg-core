@@ -41,7 +41,7 @@ describe('font-awesome', () => {
   });
 
   it('test over class', () => {
-    icon('adjust', {classes: ['iconx']}).should.eql(faIcon({iconName: 'adjust'}, {classes: ['iconx']}).html[0]);
+    icon('adjust', {type: 'fa', classes: ['iconx']}).should.eql(faIcon({iconName: 'adjust'}, {classes: ['iconx']}).html[0]);
   });
 
   it('test find icon with definition', () => {
