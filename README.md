@@ -40,7 +40,7 @@ In the article (key and value will be mapped to option)
 
 - name: icon name, and you can search them in font awesome or ionicons
 - options: icon options
-  - type: icon provider type, `fa` or `ionicons` at now
+  - type: icon provider type, `fa`(`fontawesome`) or `ion`(`ionicons`) at now
   - style: icon style, you should choose `Outline` `Filled` or `Sharp` (only for type: `ionicons`)
 
 ## Customize
@@ -50,6 +50,7 @@ const { load, assignOptions } = require('@jiangtj/hexo-icon-svg-core/lib/core');
 
 load({
   type: 'custom type name', // type will be removed `-``_`` `, for example, this example is the same as `customtypename`
+  // type: ['fa', 'fontawesome']
   handle: (name, options, ctx) => {
     console.log(name)
     console.log(options)  // Passed in by the icon method, or default configuration
