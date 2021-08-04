@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/jiangtj-lab/hexo-icon-svg-core#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
