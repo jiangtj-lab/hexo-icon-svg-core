@@ -1,6 +1,6 @@
 'use strict';
 
-const { load, assignOptions, icon } = require('../../lib/core');
+const { load, assignOptions, icon, findHandlerConfiguration } = require('../../lib/core');
 
 describe('core', () => {
 
@@ -49,6 +49,27 @@ describe('core', () => {
     });
 
     icon('apl').should.eql({ name: 'apl' });
+  });
+
+  it('test findHandlerConfiguration', () => {
+    assignOptions({
+      key: 'key-config',
+      keya: 'keya-config',
+      configurationKey: 'configurationKey-config'
+    });
+
+    findHandlerConfiguration({
+      type: 'key',
+      configurationKey: 'configurationKey'
+    }).should.eql('configurationKey-config');
+
+    findHandlerConfiguration({
+      type: 'key'
+    }).should.eql('key-config');
+
+    findHandlerConfiguration({
+      type: ['keya', 'keyb']
+    }).should.eql('keya-config');
   });
 
 });
