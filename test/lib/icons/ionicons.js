@@ -2,13 +2,11 @@
 
 const { load, assignOptions, icon } = require('../../../lib/core');
 const ionicons = require('../../../lib/icons/ionicons');
-const { readFileSync } = require('fs');
 const { assignDefaultOptions } = require('../../../lib/install');
+const { readModuleSVG } = require('../../../lib/utils');
 
 const getSVG = name => {
-  const path = require.resolve(`ionicons/dist/svg/${name}.svg`);
-  return readFileSync(path)
-    .toString()
+  return readModuleSVG(`ionicons/dist/svg/${name}.svg`)
     .replace('class="ionicon"', 'class="icon ionicon"');
 };
 
@@ -41,6 +39,11 @@ describe('ionicons', () => {
   it('test name with logo-', () => {
     icon('logo-android', {style: 'Sharp'}).should.eql(getSVG('logo-android'));
     icon('logo-android').should.eql(getSVG('logo-android'));
+  });
+
+  it('test custom class', () => {
+    icon('accessibility', {class: 'iconx'}).should.eql(readModuleSVG('ionicons/dist/svg/accessibility-outline.svg')
+      .replace('class="ionicon"', 'class="iconx ionicon"'));
   });
 
 });

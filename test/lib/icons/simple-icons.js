@@ -22,4 +22,9 @@ describe('simple icons', () => {
     icon('simpleicons').should.eql(getSVG('simpleicons'));
   });
 
+  it('test custom class', () => {
+    icon('simpleicons', {class: 'iconx'}).should.eql(readModuleSVG('simple-icons/icons/simpleicons.svg')
+      .replace('<svg ', '<svg class="iconx simple-icons" '));
+  });
+
 });
