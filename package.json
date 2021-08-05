@@ -1,6 +1,6 @@
 {
   "name": "@jiangtj/hexo-icon-svg-core",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An icon svg core package for Hexo.",
   "main": "index.js",
   "scripts": {
