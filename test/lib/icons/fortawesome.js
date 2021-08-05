@@ -1,7 +1,7 @@
 'use strict';
 
 const { load, assignOptions, icon } = require('../../../lib/core');
-const fa = require('../../../lib/icons/fa');
+const fa = require('../../../lib/icons/fortawesome');
 const { library, icon: faIcon } = require('@fortawesome/fontawesome-svg-core');
 const { fas } = require('@fortawesome/free-solid-svg-icons');
 const { far } = require('@fortawesome/free-regular-svg-icons');
