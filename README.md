@@ -8,7 +8,7 @@ A mutli-icons plugin for hexo
 yarn add @jiangtj/hexo-icon-svg-core
 ```
 
-If used in themes or plugins, add the following additional content
+If used in themes or plugins, add the following additional content ([example](https://github.com/jiangtj/hexo-theme-cake/blob/master/lib/icon.js))
 
 ```js
 const { install } = require('@jiangtj/hexo-icon-svg-core/lib/install');
@@ -19,7 +19,7 @@ install(hexo);
 
 ```yml
 icon:
-  default_type: fa # or ionicons
+  default_type: fa # or ionicons simple_icons
   # fontawesome default options
   fontawesome:
     classes: ['icon'] # Add additional classes
