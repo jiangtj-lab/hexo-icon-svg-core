@@ -1,6 +1,6 @@
 # hexo-icon-svg-core
 
-A hexo plugin for svg icon, included font-awesome5 and ionicons (in development, there may be huge changes in the api)
+A mutli-icons plugin for hexo
 
 ## Install
 
@@ -51,13 +51,13 @@ In the article (key and value will be mapped to options)
 
 ## Api
 
-### Font Awesome
+### Font Awesome (type: `fa` or `fontawesome`)
 
 - name:
   - String: icon name, and you can search them in font awesome
   - Object: icon definition
 - options: icon options
-  - type: icon provider type, `fa`(`fontawesome`) or `ion`(`ionicons`) at now, if not provided, the default_type in the configuration file will be used
+  - type: icon provider type, if not provided, the default_type in the configuration file will be used
   - ...[icon params](https://fontawesome.com/v5.15/how-to-use/javascript-api/methods/icon)
 
 ```js
@@ -69,17 +69,29 @@ icon('angry', {type: 'fa'})
 icon('angry', {type: 'fa', classes: ['iconx']})
 ```
 
-### Ionicons
+### Ionicons (type: `ion` or `ionicons`)
 - name: icon name, and you can search them in ionicons
 - options: icon options
-  - type: icon provider type, `fa`(`fontawesome`) or `ion`(`ionicons`) at now, if not provided, the default_type in the configuration file will be used
-  - style: icon style, you should choose `Outline` `Filled` or `Sharp`
+  - type: icon provider type, if not provided, the default_type in the configuration file will be used
+  - class: you can custom icon size or others through it, default `icon`
+  - style: icon style, you should choose `outline` `filled` or `sharp`
 
 ```js
 icon('accessibility', {type: 'ionicons'})
 icon('accessibility-sharp', {type: 'ionicons'})
 icon('accessibility', {type: 'ionicons', style: 'Filled'})
 icon('logo-android', {type: 'ionicons'})
+icon('logo-android', {type: 'ionicons', class: 'iconx'})
+```
+
+### Simple Icons (type: `simpleicons`)
+- name: icon name, and you can search them in ionicons
+- options: icon options
+  - type: icon provider type, if not provided, the default_type in the configuration file will be used
+  - class: you can custom icon size or others through it, default `icon`
+
+```js
+icon('simpleicons', {type: 'simpleicons'})
 ```
 
 ## Customize

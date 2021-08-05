@@ -20,6 +20,8 @@ describe('simple icons', () => {
 
   it('test icon()', () => {
     icon('simpleicons').should.eql(getSVG('simpleicons'));
+    icon('airplayvideo').should.eql(getSVG('airplayvideo'));
+    icon('AirPlay Video').should.eql(getSVG('airplayvideo'));
   });
 
   it('test custom class', () => {
