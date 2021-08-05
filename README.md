@@ -25,7 +25,10 @@ icon:
     classes: ['icon'] # Add additional classes
   # ionicons default options
   ionicons:
-    style: Outline # icon style, you should choose `Outline` `Filled` or `Sharp` (only for type: `ionicons`)
+    classes: 'icon'
+    style: outline # icon style, you should choose `outline` `filled` or `sharp`
+  simple_icons:
+    classes: 'icon'
 ```
 
 ## Usage
