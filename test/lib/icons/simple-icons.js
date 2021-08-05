@@ -22,6 +22,9 @@ describe('simple icons', () => {
     icon('simpleicons').should.eql(getSVG('simpleicons'));
     icon('airplayvideo').should.eql(getSVG('airplayvideo'));
     icon('AirPlay Video').should.eql(getSVG('airplayvideo'));
+    icon('/e/').should.eql(getSVG('e'));
+    icon('.NET').should.eql(getSVG('dotnet'));
+    icon('dotnet').should.eql(getSVG('dotnet'));
   });
 
   it('test custom class', () => {
