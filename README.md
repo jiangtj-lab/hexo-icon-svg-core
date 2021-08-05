@@ -65,8 +65,8 @@ In the article (key and value will be mapped to options)
 
 ```js
 icon('angry', {type: 'fa'})
-icon('fas-angry', {type: 'fa'})
-icon('fa far-angry', {type: 'fa'})
+icon('fas angry', {type: 'fa'})
+icon('far fa-angry', {type: 'fa'})
 icon({iconName: 'angry', prefix: 'far'}, {type: 'fa'})
 icon('angry', {type: 'fa'})
 icon('angry', {type: 'fa', classes: ['iconx']})

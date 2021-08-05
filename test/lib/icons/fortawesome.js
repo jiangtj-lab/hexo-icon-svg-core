@@ -21,16 +21,16 @@ describe('font-awesome', () => {
     icon('adjust').should.eql(faIcon({iconName: 'adjust'}, {classes: ['icon']}).html[0]);
   });
 
-  it('test name with fa- fas- far- or fab-', () => {
-    icon('fa-angry').should.eql(faIcon({iconName: 'angry'}, {classes: ['icon']}).html[0]);
-    icon('fas-angry').should.eql(faIcon({iconName: 'angry', prefix: 'fas'}, {classes: ['icon']}).html[0]);
-    icon('far-angry').should.eql(faIcon({iconName: 'angry', prefix: 'far'}, {classes: ['icon']}).html[0]);
-    icon('fab-android').should.eql(faIcon({iconName: 'android', prefix: 'fab'}, {classes: ['icon']}).html[0]);
+  it('test flag with fa fas far or fab', () => {
+    icon('fa angry').should.eql(faIcon({iconName: 'angry'}, {classes: ['icon']}).html[0]);
+    icon('fas angry').should.eql(faIcon({iconName: 'angry', prefix: 'fas'}, {classes: ['icon']}).html[0]);
+    icon('far angry').should.eql(faIcon({iconName: 'angry', prefix: 'far'}, {classes: ['icon']}).html[0]);
+    icon('fab android').should.eql(faIcon({iconName: 'android', prefix: 'fab'}, {classes: ['icon']}).html[0]);
   });
 
-  it('test ignore fa prefix', () => {
-    icon('fa adjust').should.eql(faIcon({iconName: 'adjust'}, {classes: ['icon']}).html[0]);
-    icon('fa fas-angry').should.eql(faIcon({iconName: 'angry', prefix: 'fas'}, {classes: ['icon']}).html[0]);
+  it('test ignore fa- prefix', () => {
+    icon('fa-adjust').should.eql(faIcon({iconName: 'adjust'}, {classes: ['icon']}).html[0]);
+    icon('fas fa-angry').should.eql(faIcon({iconName: 'angry', prefix: 'fas'}, {classes: ['icon']}).html[0]);
   });
 
   it('test over class', () => {
