@@ -3,13 +3,7 @@
 const { load, assignOptions, icon } = require('../../../lib/core');
 const simpleIcons = require('../../../lib/icons/simple-icons');
 const { readModuleSVG } = require('../../../lib/utils');
-
-const setSimpleIconsOptions = () => {
-  load(simpleIcons);
-  assignOptions({
-    default_type: 'simpleIcons'
-  });
-};
+const { assignDefaultOptions } = require('../../../lib/install');
 
 const getSVG = name => {
   return readModuleSVG(`simple-icons/icons/${name}.svg`)
@@ -19,7 +13,9 @@ const getSVG = name => {
 describe('simple icons', () => {
 
   before(() => {
-    setSimpleIconsOptions();
+    assignDefaultOptions();
+    load(simpleIcons);
+    assignOptions({default_type: 'simpleIcons'});
   });
 
   it('test icon()', () => {

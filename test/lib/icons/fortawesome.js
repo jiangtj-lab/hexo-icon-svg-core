@@ -6,22 +6,15 @@ const { library, icon: faIcon } = require('@fortawesome/fontawesome-svg-core');
 const { fas } = require('@fortawesome/free-solid-svg-icons');
 const { far } = require('@fortawesome/free-regular-svg-icons');
 const { fab } = require('@fortawesome/free-brands-svg-icons');
-
-const setFAOptions = () => {
-  load(fa);
-  assignOptions({
-    default_type: 'fa',
-    fa: {
-      classes: ['icon']
-    }
-  });
-  library.add(fas, far, fab);
-};
+const { assignDefaultOptions } = require('../../../lib/install');
 
 describe('font-awesome', () => {
 
   before(() => {
-    setFAOptions();
+    assignDefaultOptions();
+    load(fa);
+    assignOptions({ default_type: 'fa' });
+    library.add(fas, far, fab);
   });
 
   it('test only name', () => {

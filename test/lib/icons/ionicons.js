@@ -3,16 +3,7 @@
 const { load, assignOptions, icon } = require('../../../lib/core');
 const ionicons = require('../../../lib/icons/ionicons');
 const { readFileSync } = require('fs');
-
-const setIoniconsOptions = () => {
-  load(ionicons);
-  assignOptions({
-    default_type: 'ionicons',
-    ionicons: {
-      style: 'Outline'
-    }
-  });
-};
+const { assignDefaultOptions } = require('../../../lib/install');
 
 const getSVG = name => {
   const path = require.resolve(`ionicons/dist/svg/${name}.svg`);
@@ -24,7 +15,9 @@ const getSVG = name => {
 describe('ionicons', () => {
 
   before(() => {
-    setIoniconsOptions();
+    assignDefaultOptions();
+    load(ionicons);
+    assignOptions({default_type: 'ionicons'});
   });
 
   it('test outline style', () => {
