@@ -7,4 +7,5 @@ describe('main', () => {
   require('./lib/core');
   require('./lib/icons/fortawesome');
   require('./lib/icons/ionicons');
+  require('./lib/icons/simple-icons');
 });
