@@ -39,7 +39,7 @@
     "ionicons": "^5.5.2",
     "lodash": "^4.17.21",
     "qs": "^6.10.1",
-    "simple-icons": "^5.8.1"
+    "simple-icons": "^6.6.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
