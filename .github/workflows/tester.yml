@@ -12,12 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2.3.2
+        uses: actions/setup-node@v2.5.1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Dependencies
-        run: npm install
-      - name: Test
-        run: npm test
-        env:
-          CI: true
+          check-latest: true
+          cache: 'npm'
+      - run: npm install
+      - run: npm test
